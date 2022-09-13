@@ -42,7 +42,10 @@
         </div>
       </div>
       <div class="profile-content-item" *ngSwitchCase="'purchases'">purchases</div>
-      <div class="profile-content-item" *ngSwitchCase="'addresses'">addresses</div>
+      <div class="profile-content-item" *ngSwitchCase="'addresses'">
+        <button class="btn" *ngIf="!addressForm" (click)="addAddressForm()">Add new address</button>
+        <app-address *ngIf="addressForm"></app-address>
+      </div>
     </div>
   </div>
 </div>

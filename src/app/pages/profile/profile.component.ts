@@ -14,6 +14,7 @@ export class ProfileComponent implements OnInit {
   customer: Customer;
   passwordForm: boolean = false;
   passwordNoValid: boolean = false;
+  addressForm: boolean = false;
 
   form = new FormGroup({
     oldPassword: new FormControl('', [Validators.required]),
@@ -37,13 +38,20 @@ export class ProfileComponent implements OnInit {
   }
 
   onClickItem(active: String) {
-    if(active === 'profile') this.passwordForm = false;
+    if(active === 'profile') {
+      this.passwordForm = false;
+      this.addressForm = false;
+    }
 
     this.active = `${active}`;
   }
 
   changePassword() {
     this.passwordForm = true;
+  }
+
+  addAddressForm() {
+    this.addressForm = true;
   }
 
   save() {
