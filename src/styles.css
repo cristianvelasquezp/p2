@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+/****** CSS Variables Styles ******/
+:root {
+  --color-primary: #cbf23e;
+  --color-gray1: #f5f5f5;
+  --color-gray2: #eee;
+  --color-gray3: #707070;
+  --color-gray4: #757575;
+  --color-font: #111;
+  --color-error: #ff0011;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  padding-bottom: 8rem;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+
+/****** Typography Styles ******/
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--color-font);
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem;
+}
+
+
+/****** Forms Styles ******/
+
+.input {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  width: 100%;
+  height: 4rem;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  border-radius: 3px;
+  border: 1px solid var(--color-font);
+}
+
+.form-container {
+  width: 40rem;
+  margin: auto;
+  display: flex;
+  min-height: calc( 100vh - 9rem);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-container h1{
+  margin-bottom: 3rem;
+}
+
+
+.form-container form {
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 3px;
+  height: 4rem;
+  background-color: var(--color-font);
+  color: #fff;
+  cursor: pointer;
+  margin-top: 2rem;
+  border-color: transparent;
+}
+
+.btn:hover {
+  background-color: var(--color-gray4);
+}
+
+.error {
+  color: var(--color-error);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+
+
+/****** Utilities ******/
+
+.u-align-center {
+  text-align: center;
+}
+
+.u-strong{
+  font-weight: 700;
+}
